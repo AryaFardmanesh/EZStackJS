@@ -1,0 +1,29 @@
+{
+    "name": "ezstackjs",
+    "version": "1.0.0",
+    "description": "A very easy and lightweight JavaScript library for working with stack data structure.",
+    "main": "dist/ezstack.js",
+    "scripts": {
+        "test": "jest --watchAll",
+        "babel_convert": "babel src --out-file dist/ezstack.js",
+        "compress": "terser dist/ezstack.js -o dist/ezstack.js",
+        "build": "npm run babel_convert & npm run compress"
+    },
+    "keywords": [
+        "EZStackJS",
+        "stack",
+        "library",
+        "stack js",
+        "data structure",
+        "stack data structure"
+    ],
+    "author": "Arya Fardmanesh",
+    "license": "MIT",
+    "devDependencies": {
+        "@babel/cli": "^7.23.9",
+        "@babel/core": "^7.24.0",
+        "@babel/preset-env": "^7.24.0",
+        "jest": "^29.7.0",
+        "terser": "^5.29.2"
+    }
+}

@@ -41,7 +41,7 @@ class Stack {
 
         this.toReverseArray = function () {
             let arr = [];
-            for (let i = 0; i >= _stack.length; i++)
+            for (let i = 0; i < _stack.length; i++)
                 arr[arr.length] = _stack[i];
             return arr;
         }

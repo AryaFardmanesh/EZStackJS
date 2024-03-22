@@ -7,10 +7,6 @@ class Stack {
             _isEmpty : function () {
                 return (!this._size);
             },
-            filter : {
-                type : function () { },
-                range : function () { },
-            }
         };
 
         this.push = function (item) {

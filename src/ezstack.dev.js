@@ -18,7 +18,10 @@ class Stack {
         }
 
         this.pop = function () {
-            return _stack[--privateMethod._size];
+            if (privateMethod._isEmpty())
+                return undefined;
+            privateMethod._size--;
+            return _stack.pop();
         }
 
         this.size = function () {

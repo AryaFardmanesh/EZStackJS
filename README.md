@@ -94,8 +94,15 @@ This method puts all elements of the stack in reverse order in the array and ret
 - `Array`.
     - An array of all elements in the reverse array.
 
+### `.clear()`
+
+This method clears all data from the stack and empties the stack.
+
+---
+
 Explore the various methods to effectively manage and manipulate stack using EZStackJS in your JavaScript applications.
 
+---
 
 ## Advanced Topic: Time Complexity Analysis
 
@@ -123,3 +130,6 @@ Below is an analysis of the time complexity for each method in the EZStackJS lib
 
 ### Time Complexity `.toReverseArray()`:
 - O(n)
+
+### Time Complexity `.clear()`:
+- O(1)

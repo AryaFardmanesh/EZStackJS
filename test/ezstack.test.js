@@ -423,3 +423,84 @@ describe(`Test .toReverseArray method - Group`, () => {
         expect(actual).toEqual(expected);
     });
 });
+
+describe(`Test .clear method - Group`, () => {
+    it(`This should remove all data from the stack - Unit 1`, () => {
+        stack.push('item 1');
+        stack.push('item 2');
+        stack.push('item 3');
+
+        stack.clear();
+
+        let actual = stack.toArray();
+        let expected = [];
+
+        expect(actual).toEqual(expected);
+    });
+
+    it(`This should remove all data from the stack - Unit 2`, () => {
+        stack.push('item 1');
+        stack.push('item 2');
+        stack.push('item 3');
+
+        stack.pop();
+
+        stack.clear();
+
+        let actual = stack.toArray();
+        let expected = [];
+
+        expect(actual).toEqual(expected);
+    });
+
+    it(`This should remove all data from the stack - Unit 3`, () => {
+        stack.push('item 1');
+        stack.push('item 2');
+
+        stack.clear();
+
+        let actual = stack.size();
+        let expected = 0;
+
+        expect(actual).toEqual(expected);
+    });
+
+    it(`This should remove all data from the stack - Unit 4`, () => {
+        stack.push('item 1');
+        stack.push('item 2');
+
+        stack.clear();
+
+        let actual = stack.isEmpty();
+        let expected = true;
+
+        expect(actual).toEqual(expected);
+    });
+
+    it(`This should remove all data from the stack - Unit 5`, () => {
+        stack.clear();
+
+        let actual = stack.toArray();
+        let expected = [];
+
+        expect(actual).toEqual(expected);
+    });
+
+    it(`This should remove all data from the stack - Unit 6`, () => {
+        stack.clear();
+
+        let actual = stack.size();
+        let expected = 0;
+
+        expect(actual).toEqual(expected);
+    });
+
+    it(`This should remove all data from the stack - Unit 7`, () => {
+        stack.clear();
+
+        let actual = stack.isEmpty();
+        let expected = true;
+
+        expect(actual).toEqual(expected);
+    });
+});

@@ -45,6 +45,11 @@ class Stack {
                 arr[arr.length] = _stack[i];
             return arr;
         }
+
+        this.clear = function () {
+            _stack = [ ];
+            privateMethod._size = 0;
+        }
     }
 }
 

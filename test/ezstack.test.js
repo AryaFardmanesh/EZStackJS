@@ -424,6 +424,56 @@ describe(`Test .toReverseArray method - Group`, () => {
     });
 });
 
+describe(`Test .forEach method - Group`, () => {
+    it(`It should call the data correctly and in order - Unit 1`, () => {
+        stack.push('item 1');
+        stack.push('item 2');
+        stack.push('item 3');
+        stack.push('item 4');
+        stack.push('item 5');
+
+        let actual = [];
+        stack.forEach((value) => {
+            actual.push(value);
+        });
+
+        let expected = ['item 5', 'item 4', 'item 3', 'item 2', 'item 1'];
+
+        expect(actual).toEqual(expected);
+    });
+
+    it(`It should call the data correctly and in order - Unit 2`, () => {
+        stack.push('item 1');
+        stack.push('item 2');
+        stack.push('item 3');
+        stack.push('item 4');
+        stack.push('item 5');
+
+        stack.pop();
+        stack.pop();
+
+        let actual = [];
+        stack.forEach((value) => {
+            actual.push(value);
+        });
+
+        let expected = ['item 3', 'item 2', 'item 1'];
+
+        expect(actual).toEqual(expected);
+    });
+
+    it(`It should call the data correctly and in order - Unit 3`, () => {
+        let actual = [];
+        stack.forEach((value) => {
+            actual.push(value);
+        });
+
+        let expected = [];
+
+        expect(actual).toEqual(expected);
+    });
+});
+
 describe(`Test .clear method - Group`, () => {
     it(`This should remove all data from the stack - Unit 1`, () => {
         stack.push('item 1');

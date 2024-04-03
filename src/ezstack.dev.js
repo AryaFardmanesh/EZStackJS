@@ -46,6 +46,11 @@ class Stack {
             return arr;
         }
 
+        this.forEach = function (callback = (d, i) => {}) {
+            for (let i = _stack.length - 1; i >= 0; i--)
+                callback(_stack[i], i);
+        }
+
         this.clear = function () {
             _stack = [ ];
             privateMethod._size = 0;
